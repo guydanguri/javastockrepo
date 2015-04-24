@@ -5,34 +5,32 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
-		<servlet-name>Guy_Nasdaq</servlet-name>
+		<servlet-name>Guy_NasdaqServlet</servlet-name>
 		<servlet-class>com.mta.javacourse.Guy_NasdaqServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Guy_Nasdaq</servlet-name>
-		<url-pattern>/guy_nasdaq</url-pattern>
+		<servlet-name>Guy_NasdaqServlet</servlet-name>
+		<url-pattern>/Guy_NasdaqServlet</url-pattern>
 	</servlet-mapping>
+	
+	
 	<servlet>
-<servlet-name>Ex03Servlet</servlet-name>
-<servlet-class>com.mta.javacourse.Ex03Servlet</servlet-class>
-</servlet>
-
-
-<servlet-mapping>
-<servlet-name>Ex03Servlet</servlet-name>
-<url-pattern>/Ex03Servlet</url-pattern>
-</servlet-mapping>
-<servlet>
-<servlet-name>stockDetails</servlet-name>
-<servlet-class>com.mta.javacourse.StockDetailsServle</servlet-class>
-</servlet>
-<servlet-mapping>
-<servlet-name>stockDetails</servlet-name>
-<url-pattern>/stockDetails</url-pattern>
-</servlet-mapping>
-
-
-
+	  <servlet-name>Ex03Servlet</servlet-name>
+	  <servlet-class>com.mta.javacourse.Ex03Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+ 	 <servlet-name>Ex03Servlet</servlet-name>
+	 <url-pattern>/Ex03Servlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	  <servlet-name>stockDetails</servlet-name>
+	    <servlet-class>com.mta.javacourse.StockDetailsServle</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	  <servlet-name>stockDetails</servlet-name>
+	  <url-pattern>/stockDetails</url-pattern>
+	</servlet-mapping>
 	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
