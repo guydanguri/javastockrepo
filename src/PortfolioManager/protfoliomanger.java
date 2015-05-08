@@ -1,14 +1,14 @@
 package PortfolioManager;
 
 
-import com.mta.javacourse.Stock;
-import com.mta.javacourse.model.portfolio;
+import com.mta.javacourse.model.Portfolio;
+import com.mta.javacourse.model.Stock;
 
 public class protfoliomanger {
 	
-	public portfolio getPortfolio(){
+	public Portfolio getPortfolio(){
 		
-		portfolio protfolio = new portfolio();
+		Portfolio protfolio = new Portfolio();
 		
 		protfolio.setTitle("Guy_Portfolio");
 		

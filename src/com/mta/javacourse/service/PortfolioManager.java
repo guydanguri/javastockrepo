@@ -3,15 +3,25 @@ package com.mta.javacourse.service;
 import java.util.Date;
 import java.util.Calendar;
 
-import com.mta.javacourse.Stock;
-import com.mta.javacourse.model.portfolio;
+import com.mta.javacourse.model.Portfolio;
+import com.mta.javacourse.model.Stock;
+
+/**
+ * 
+ * This class is the portfolio manger.
+ * 
+ *
+ */
 
 @SuppressWarnings("unused")
 public class PortfolioManager{
-	
-	public portfolio getPortfolio(){
+	/**
+	 * 
+	 * this method set a new portfolio and return a portfolio;
+	 */
+	public Portfolio getPortfolio(){
 		
-		portfolio portfolio = new portfolio();
+		Portfolio portfolio = new Portfolio();
 		portfolio.setTitle("Guy_Portfolio");
 		
 		Calendar cal = Calendar.getInstance();

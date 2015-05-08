@@ -1,5 +1,13 @@
-package com.mta.javacourse;
+package com.mta.javacourse.model;
 
+import java.util.Date;
+
+
+/**
+ * 
+ * This class represent a stock
+ *
+ */
 public class Stock {
 	
 	 private String symbol ;
@@ -9,7 +17,9 @@ public class Stock {
 	 private int recommendation;
 	 private int stockQuantity;
 	 
+	 
 	 private static final int BUY=0, SELL=1,REMOVE=2, HOLD=3;
+	
 	 
 	 public Stock ( String newsymbol, Float newask , Float newbid , java.util.Date newdate){
 		 
@@ -18,7 +28,20 @@ public class Stock {
 		 this.bid= newbid;
 		 this.date=newdate;
 	 }
-	 public String getstmbol() {
+	 
+	 public Stock (Stock stock){
+		 
+		 this.symbol=new String(stock.getsymbol()); 
+		 this.ask=new Float(stock.getask());
+		 this.bid=new Float(stock.getbid());
+		 this.date=new java.util.Date(stock.getdate().getTime());
+		 
+		 
+	 }	
+	 
+	 
+	 
+	 public String getsymbol() {
 			return this.symbol;
 		}
 	 
@@ -51,7 +74,7 @@ public class Stock {
 	 }
 	 
 	 public String getHtmlDescription(){
-			return "<b>Stock symbol</b> : "+this.getstmbol()+", <b>ask</b> : "+this.getask()+", <b>Bid</b>: "+this.getbid()+", <b>Date</b>: "+this.getDateMonth()+"/"+this.getDateDay()+"/"+this.getDateYear(); 
+			return "<b>Stock symbol</b> : "+this.getsymbol()+", <b>ask</b> : "+this.getask()+", <b>Bid</b>: "+this.getbid()+", <b>Date</b>: "+this.getDateMonth()+"/"+this.getDateDay()+"/"+this.getDateYear(); 
 		}
 		@SuppressWarnings("deprecation")
 		public int getDateDay(){
@@ -80,12 +103,6 @@ public class Stock {
 		}
 		public void setStockQuantity(int stockQuantity) {
 			this.stockQuantity = stockQuantity;
-		}
-		
-	     
-	 
-	 
-	 
-	
+		}	
 
 }
