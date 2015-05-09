@@ -3,6 +3,10 @@ package com.mta.javacourse.model;
 import java.util.Date;
 
 
+import com.mta.javacourse.model.Portfolio.ALGO_RECOMMENDATION;
+
+
+
 /**
  * 
  * This class represent a stock
@@ -14,11 +18,10 @@ public class Stock {
 	 private Float ask;
 	 private Float bid;
 	 private java.util.Date date;
-	 private int recommendation;
+	 private  ALGO_RECOMMENDATION recommendation;
 	 private int stockQuantity;
 	 
 	 
-	 private static final int BUY=0, SELL=1,REMOVE=2, HOLD=3;
 	
 	 
 	 public Stock ( String newsymbol, Float newask , Float newbid , java.util.Date newdate){
@@ -27,6 +30,7 @@ public class Stock {
 		 this.ask= newask;
 		 this.bid= newbid;
 		 this.date=newdate;
+		 this.recommendation=ALGO_RECOMMENDATION.HOLD;
 	 }
 	 
 	 public Stock (Stock stock){
@@ -92,10 +96,10 @@ public class Stock {
 			// TODO Auto-generated method stub
 			return null;
 		}
-		public int getRecommendation() {
+		public ALGO_RECOMMENDATION getRecommendation() {
 			return recommendation;
 		}
-		public void setRecommendation(int recommendation) {
+		public void setRecommendation(ALGO_RECOMMENDATION recommendation) {
 			this.recommendation = recommendation;
 		}
 		public int getStockQuantity() {
