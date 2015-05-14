@@ -1,6 +1,10 @@
 package com.mta.javacourse.model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+
+
 
 
 import com.mta.javacourse.model.Portfolio.ALGO_RECOMMENDATION;
@@ -78,24 +82,16 @@ public class Stock {
 	 }
 	 
 	 public String getHtmlDescription(){
-			return "<b>Stock symbol</b> : "+this.getsymbol()+", <b>ask</b> : "+this.getask()+", <b>Bid</b>: "+this.getbid()+", <b>Date</b>: "+this.getDateMonth()+"/"+this.getDateDay()+"/"+this.getDateYear(); 
-		}
-		@SuppressWarnings("deprecation")
-		public int getDateDay(){
-			return this.date.getDate();
-		}
-		@SuppressWarnings("deprecation")
-		public int getDateMonth(){
-			return this.date.getMonth();
-		}
-		@SuppressWarnings("deprecation")
-		public int getDateYear(){
-			return this.date.getYear();
-		}
-		public String getHtmlDesc() {
-			// TODO Auto-generated method stub
-			return null;
-		}
+		 DateFormat df=new SimpleDateFormat("MM/dd/yyyy");
+		  String dateStr = df.format(date);
+		  
+		 String resultStr = new String("<b>Stock symbol is: </b>" + getsymbol() + "<b> ask: </b>" + getask() + "<b> Bid: </b>" + getbid() + "<b> Date: </b>" + dateStr + " The quantity is: " + this.getStockQuantity());
+	     return resultStr;		
+		     }
+	 
+	 
+
+	
 		public ALGO_RECOMMENDATION getRecommendation() {
 			return recommendation;
 		}

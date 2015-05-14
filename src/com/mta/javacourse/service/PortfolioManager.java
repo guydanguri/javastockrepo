@@ -2,9 +2,6 @@ package com.mta.javacourse.service;
 
 import java.util.Date;
 import java.util.Calendar;
-
-import org.apache.tools.ant.types.CommandlineJava.SysProperties;
-
 import com.mta.javacourse.model.Portfolio;
 import com.mta.javacourse.model.Stock;
 
@@ -36,17 +33,12 @@ public class PortfolioManager{
 		Stock stock1 = new Stock("PIA",10.0f ,8.5f, d1);		
 		Stock stock2 = new Stock("AAL",30.0f ,25.5f, d2);
 		Stock stock3 = new Stock("CAAS",20.0f , 15.5f, d3);
-		
-		
-		System.out.println("what going on?");
-		
-		
-		
+				
 		myPortfolio.buyStock(stock1, 20);
 		myPortfolio.buyStock(stock2, 30);
 		myPortfolio.buyStock(stock3, 40);
 		
-		myPortfolio.sellStock("AAL",-1);
+		myPortfolio.sellStock("AAL",-1); 
 		myPortfolio.removeStock("CAAS");
 		
 		return myPortfolio;
