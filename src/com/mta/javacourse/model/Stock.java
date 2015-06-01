@@ -7,6 +7,10 @@ import java.util.Date;
 
 
 
+
+
+import org.algo.model.StockInterface;
+
 import com.mta.javacourse.model.Portfolio.ALGO_RECOMMENDATION;
 
 
@@ -16,7 +20,7 @@ import com.mta.javacourse.model.Portfolio.ALGO_RECOMMENDATION;
  * This class represent a stock
  *
  */
-public class Stock {
+public class Stock implements StockInterface  {
 	
 	 private String symbol ;
 	 private Float ask;
@@ -37,19 +41,27 @@ public class Stock {
 		 this.recommendation=ALGO_RECOMMENDATION.HOLD;
 	 }
 	 
-	 public Stock (Stock stock){
+	 public Stock (StockInterface stockInterface){
 		 
-		 this.symbol=new String(stock.getsymbol()); 
-		 this.ask=new Float(stock.getask());
-		 this.bid=new Float(stock.getbid());
-		 this.date=new java.util.Date(stock.getdate().getTime());
+		 this.symbol=new String(stockInterface.getSymbol()); 
+		 this.ask=new Float(stockInterface.getAsk());
+		 this.bid=new Float(stockInterface.getBid());
+		 this.date=new java.util.Date(stockInterface.getDate().getTime());
 		 
 		 
 	 }	
 	 
 	 
 	 
-	 public String getsymbol() {
+	 public Stock() {
+		  symbol = null;
+		  ask = (float) 0;
+		  bid = (float) 0;
+		  this.date = null;		 
+		  stockQuantity = 0;
+		 }
+
+	public String getsymbol() {
 			return this.symbol;
 		}
 	 
@@ -103,6 +115,35 @@ public class Stock {
 		}
 		public void setStockQuantity(int stockQuantity) {
 			this.stockQuantity = stockQuantity;
+		}
+
+		@Override
+		public String getSymbol() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public float getAsk() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public float getBid() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public Date getDate() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		public void setdate(long time) {
+			// TODO Auto-generated method stub
+			
 		}	
 
 }
