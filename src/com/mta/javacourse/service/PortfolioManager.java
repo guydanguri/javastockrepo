@@ -34,7 +34,7 @@ import com.mta.javacourse.model.Stock;
 @SuppressWarnings("unused")
 public class PortfolioManager implements PortfolioManagerInterface {
 
-	// public enum ALGO_RECOMMENDATION {BUY, SELL, REMOVE, HOLD }
+	 //public enum ALGO_RECOMMENDATION {BUY, SELL, REMOVE, HOLD }
 
 	/**
 	 * 
